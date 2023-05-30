@@ -20,17 +20,17 @@
             <div class="header__inner__top header__inner__single">
                 <div class="header__inner__top__single header__inner__top__single--left">
                     <div class="header__inner__top__single__item dial">
-                        <i class="fa-thin fa-phone"></i>
+                        <i class="fa fa-thin fa-phone"></i>
                     </div>
                     <div class="header__inner__top__single__item currency">
                         <span>EUR</span>
-                        <i class="fa-light fa-angle-down"></i>
+                        <i class="fa fa-light fa-angle-down"></i>
                         <div class="modal currency_modal">
                             <div class="modal__inner">
                                 <div class="modal__inner--head">
                                     <h4>Select modal</h4>
                                     <div class="close">
-                                        <i class="fa-light fa-xmark"></i>
+                                        <i class="fa fa-light fa-xmark"></i>
                                     </div>
                                 </div>
                                 <div class="modal__inner--body">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="header__inner__top__single__item lang">
                         <span>English</span>
-                        <i class="fa-light fa-angle-down"></i>
+                        <i class="fa fa-light fa-angle-down"></i>
                         <div class="modal lang_modal">
                             <div class="modal__inner">
                                 <div class="modal__inner--head">
@@ -328,9 +328,9 @@
                     </a>
                 </div>
                 <div class="header__inner__top__single header__inner__top__single--right">
-                    <i class="fa-light fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-user"></i>
-                    <i class="fa-light fa-cart-shopping"></i>
+                    <i class="fa fa-light fa-magnifying-glass"></i>
+                    <i class="fa fa-solid fa-user"></i>
+                    <i class="fa fa-light fa-cart-shopping"></i>
                 </div>
             </div>
             <div class="header__inner__btm header__inner__single">
@@ -347,6 +347,21 @@
                     <li><a href="#">deals</a></li>
                 </ul>
             </div>
+
+            <!-- search box -->
+            <div class="search_box">
+                <div class="search_box__inner">
+                    <div class="close">
+                        <i class="fa-regular fa-xmark"></i>
+                    </div>
+                    <form action="#">
+                        <input type="search" name="search" placeholder="Start your sarch" id="">
+                        <button>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>    
     <!-- END OF HEADER -->
@@ -360,13 +375,13 @@
                         <a href="#">
                             Catalog 
                         </a>
-                        <i class="fa-regular fa-angle-right"></i>
+                        <i class="fas fa-regular fa-angle-right"></i>
                     </li>
                     <li>
                         <a href="#">
                             Men 
                         </a>
-                        <i class="fa-regular fa-angle-right"></i>
+                        <i class="fas fa-regular fa-angle-right"></i>
                     </li>
                     <li>
                         <a href="#">
@@ -394,13 +409,16 @@
         <div class="container filter__inner">
             <div class="filter__inner__top filter__inner__single">
                 <div class="filter__inner__top__single" id="category">
-                    <select name="category" id="">
-                        <option value="0" selected disabled>Category</option>
-                        <option value="search" id="cat_search">
+                    <button>
+                        <span>Category</span>
+                        <i class="fas fa-regular fa-angle-down"></i>
+                    </button>
+                    <div class="filter_box">
+                        <div "id="cat_search">
                             <input type="text" name="search" id="">
-                            <i class="fa-light fa-magnifying-glass"></i>
-                        </option>
-                        <option value="clothing" id="clothing">
+                            <i class="fa fa-light fa-magnifying-glass"></i>
+                        </div>
+                        <div id="clothing">
                             <label for="cloth">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>Clothing</span>
@@ -411,17 +429,20 @@
                             <span class="cloth_item">Shirts</span><br>
                             <input type="checkbox" name="cloth" id="">
                             <span class="cloth_item">Trousers</span>
-                        </option>
-                    </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter__inner__top__single" id="color">
-                    <select name="color" id="">
-                        <option value="0" selected disabled>Color</option>
-                        <option value="search" id="col_search">
+                    <button>
+                        <span>Color</span>
+                        <i class="fas fa-regular fa-angle-down"></i>
+                    </button>
+                    <div class="filter_box">
+                        <div id="col_search">
                             <input type="text" name="search" id="">
-                            <i class="fa-light fa-magnifying-glass"></i>
-                        </option>
-                        <option value="color" id="color">
+                            <i class="fa fa-light fa-magnifying-glass"></i>
+                        </div>
+                        <div id="col_select">
                             <label for="color">
                                 <span>Color</span>
                             </label>
@@ -441,17 +462,20 @@
                             <span class="color_item">Multicolor</span><br>
                             <input type="checkbox" name="color" id="">
                             <span class="color_item">Red</span>
-                        </option>
-                    </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter__inner__top__single" id="season">
-                    <select name="season" id="">
-                        <option value="0" selected disabled>Season</option>
-                        <option value="search" id="seas_search">
+                    <button>
+                        <span>Season</span>
+                        <i class="fas fa-regular fa-angle-down"></i>
+                    </button>
+                    <div class="filter_box">
+                        <div id="seas_search">
                             <input type="text" name="search" id="">
-                            <i class="fa-light fa-magnifying-glass"></i>
-                        </option>
-                        <option value="season" id="season">
+                            <i class="fa fa-light fa-magnifying-glass"></i>
+                        </div>
+                        <div id="seas_select">
                             <label for="season">
                                 <span>Season</span>
                             </label>
@@ -459,17 +483,20 @@
                             <span class="season_item">Fall/Winter</span><br>
                             <input type="checkbox" name="season" id="">
                             <span class="season_item">Spring/Summer</span>
-                        </option>
-                    </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter__inner__top__single" id="options">
-                    <select name="options" id="">
-                        <option value="0" selected disabled>Options</option>
-                        <option value="search" id="opt_search">
+                    <button>
+                        <span>Color</span>
+                        <i class="fas fa-regular fa-angle-down"></i>
+                    </button>
+                    <div class="filter_box">
+                        <div id="opt_search">
                             <input type="text" name="search" id="">
-                            <i class="fa-light fa-magnifying-glass"></i>
-                        </option>
-                        <option value="sleeves" id="sleeves">
+                            <i class="fa fa-light fa-magnifying-glass"></i>
+                        </div>
+                        <div id="sleeves">
                             <label for="sleeve">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>Sleeves</span>
@@ -478,8 +505,8 @@
                             <span class="sleeve_item">Long</span><br>
                             <input type="checkbox" name="sleeve" id="">
                             <span class="sleeve_item">Short</span>
-                        </option>
-                        <option value="fastering" id="fastering">
+                        </div>
+                        <div id="fastering">
                             <label for="sleeve">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>Fastering</span>
@@ -490,8 +517,8 @@
                             <span class="faster_item">Zip and Button</span><br>
                             <input type="checkbox" name="faster" id="">
                             <span class="faster_item">With Zip</span>
-                        </option>
-                        <option value="pockets" id="pockets">
+                        </div>
+                        <div id="pockets">
                             <label for="sleeve">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>pockets</span>
@@ -504,8 +531,8 @@
                             <span class="pocket_item">Front Pockets</span><br>
                             <input type="checkbox" name="pocket" id="">
                             <span class="pocket_item">Single Pocket</span>
-                        </option>
-                        <option value="patterns" id="patterns">
+                        </div>
+                        <div id="patterns">
                             <label for="sleeve">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>Patterns</span>
@@ -522,8 +549,8 @@
                             <span class="pattern_item">PInstripe</span><br>
                             <input type="checkbox" name="pattern" id="">
                             <span class="pattern_item">Marl</span><br>
-                        </option>
-                        <option value="collars" id="collars">
+                        </div>
+                        <div id="collars">
                             <label for="sleeve">
                                 <i class="fa-solid fa-dash"></i>
                                 <span>Collar</span>
@@ -532,8 +559,8 @@
                             <span class="collar_item">Classic</span><br>
                             <input type="checkbox" name="collar" id="">
                             <span class="collar_item">Mandarin</span>
-                        </option>
-                    </select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="filter__inner__btm filter__inner__single">
@@ -541,20 +568,20 @@
                     <h4>Brand:</h4>
                     <button>
                         <span>Aglini</span>
-                        <i class="fa fa-xmark fa-regular"></i>
+                        <i class="fas fa-sharp fa-regular fa-xmark"></i>
                     </button>
                 </div>
                 <div class="filter__inner__btm__single">
                     <h4>Gender:</h4>
                     <button>
                         <span>Men</span>
-                        <i class="fa fa-xmark fa-regular"></i>
+                        <i class="fas fa-sharp fa-regular fa-xmark"></i>
                     </button>
                 </div>
                 <div class="filter__inner__btm__single rem_filter">
                     <button>
                         <span>remove filters</span>
-                        <i class="fa-regular fa-xmark"></i>
+                        <i class="fas fa-sharp fa-regular fa-xmark"></i>
                     </button>
                 </div>
             </div>
@@ -593,7 +620,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -628,7 +655,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -663,7 +690,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -698,7 +725,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -739,7 +766,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -774,7 +801,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -809,7 +836,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -844,7 +871,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -885,7 +912,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -920,7 +947,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -955,7 +982,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -990,7 +1017,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -1031,7 +1058,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -1066,7 +1093,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -1101,7 +1128,7 @@
                         <h3>Aglini - Shirts Men</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa-thin fa-link"></i>
+                        <i class="fa fa-thin fa-link"></i>
                     </div>
                 </div>
                 <div class="bp_btn">
@@ -1116,15 +1143,223 @@
         </div>
     </div>
 
+    <!-- pagination -->
+    <div class="full_container pagination">
+        <div class="container pagination__inner">
+            <div class="pagination__inner__single left_icon">
+                <i class="fas fa-light fa-angle-left"></i>
+            </div>
+            <div class="pagination__inner__single pages_btns">
+                <button>1</button>
+                <button class="active_page">2</button>
+            </div>
+            <div class="pagination__inner__single right_icon">
+                <i class="fas fa-light fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
     <!-- END OF MAIN -->
 
     <!-- FOOTER -->
-    <!-- END OF FOOTER -->
-    <div class="full_container header">
-        <div class="container header__inner">
-            
+    <!-- footer top -->
+    <div class="full_container footer_nav">
+        <div class="container footer_nav__inner">
+            <div class="footer_nav__inner__single footer_nav__inner--left">
+                <h3>Locations</h3>
+                <address>
+                    <h4>Operational Headquarters</h4>
+                    <p>Viale della Navigazione Interna 51/A </p>
+                    <p>35129 - Padova (PD) </p>
+                    <p>Italy</p>
+                </address>
+            </div>
+            <div class="footer_nav__inner__single">
+                <h3>Informations</h3>
+                <ul>
+                    <li>
+                        <a href="#">Company</a>
+                        <a href="#">Terms and Conditions</a>
+                        <a href="#">Dropshipping Terms</a>
+                        <a href="#">Payments</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Cookie</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_nav__inner__single">
+                <h3>Customer care</h3>
+                <ul>
+                    <li>
+                        <a href="#">Size guide</a>
+                        <a href="#">Returns goods</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Faq</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_nav__inner__single footer_nav__inner--right">
+                <h3>Informations</h3>
+                <ul>
+                    <li>
+                        <a href="#">Dropshipping Service</a>
+                        <a href="#">Warehouse Service</a>
+                        <a href="#">Shooting Service</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <!-- main footer -->
+    <div class="full_container footer">
+        <div class="container footer__inner">
+            <nav class="social_sites">
+                <a href="#">
+                    <i class="fa fa-brands fa-telegram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-rss"></i>
+                </a>
+            </nav>
+            <div class="footer_texts">
+                <p>
+                    B2B TRADE S.r.l. is not an official distributor of the brands sold on the griffati.com website 
+                </p>
+                <p>
+                    Copyright &copy; B2B GRIFFATI. All Rights Reserved. All logos and trademarks in this site belong to their respective owners.
+                </p>
+                <p>
+                    B2B TRADE S.r.l. - VAT: IT05050810281 - Cap. Soc. €100.000,00 i.v - R.E.A: PD-439244 - Viale della Navigazione Interna 51/A 35129 - Padova (PD) - Italia
+                </p>
+            </div>
+
+            <!-- menu box -->
+            <div class="menu_box">
+                <ul class="menu_box__top menu_box__single">
+
+                </ul>
+                <ul class="menu_box__btm menu_box__single">
+                    <li>
+                        <a href="#">
+                            <span>English</span>
+                            <i class="fa-light fa-angle-right"></i>
+                        </a>
+                        <a href="#">
+                            <span>EUR</span>
+                            <i class="fa-light fa-angle-right"></i>
+                        </a>
+                        <a href="#">
+                            <span>Login</span>
+                        </a>
+                        <a href="#">
+                            <span>Subscribe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- chat box -->
+            <div class="chat_box">
+                <div class="chat_box__head">
+                    <div class="chat_box__head__single chb_menu">
+                        <i class="fa-thin fa-bars"></i>
+                        <div class="hov_items">
+                            <i class="fa-light fa-xmark"></i>
+                            <br>
+                            <a href="#">
+                                <i class="fa-thin fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_box__body">
+                    <h5>B2B TRADE S.r.l. - VAT: IT05050810281 - Cap. Soc. €100.000,00 i.v - R.E.A: PD-439244 - Viale della Navigazione Interna 51/A 35129 - Padova (PD) - Italia</h5>
+
+                    <form action="#">
+                        <div class="name_email">
+                            <div class="name">
+                                <label for="name">Name*</label><br>
+                                <input type="text" placeholder="Enter Your Name" name="name" id="">
+                            </div>
+                            <div class="email">
+                                <label for="email">E-mail*</label>
+                                <input type="email" name="email" placeholder="Enter Your Email" id="">
+                            </div>
+                        </div>
+                        <label for="phone">Phone</label>
+                        <br>
+                        <input type="number" placeholder="Enter Your Phone" name="phone" id="">
+                        <br>
+                        <label for="question">Your Question</label><br>
+                        <textarea name="question" id="" cols="30" rows="3">Enter your message</textarea>
+                        <br>
+                        <input type="checkbox" name="terms" id="">
+                        <label for="terms">
+                            I accept my personal data will be handled according to <a href="#">our terms and to the Law</a>
+                        </label>
+                        <br>
+                        <input type="submit" value="Leave a message">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+    <div class="full_container footer_nav" style="display: none;">
+        <div class="container footer_nav__inner">
+            <nav class="social_sites">
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-rss"></i>
+                </a>
+            </nav>
+            <div class="footer_texts">
+                <p>
+                    B2B TRADE S.r.l. is not an official distributor of the brands sold on the griffati.com website 
+                </p>
+                <p>
+                    Copyright &copy; B2B GRIFFATI. All Rights Reserved. All logos and trademarks in this site belong to their respective owners.
+                </p>
+                <p>
+                    B2B TRADE S.r.l. - VAT: IT05050810281 - Cap. Soc. €100.000,00 i.v - R.E.A: PD-439244 - Viale della Navigazione Interna 51/A 35129 - Padova (PD) - Italia
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <!-- custom js -->
     <script src="app.js"></script>
 </body>

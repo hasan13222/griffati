@@ -1,1 +1,310 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+.products__inner__single, .breadcrumb__inner--right select {
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fefefe;
+  font-size: 1.4rem;
+}
+
+.full_container {
+  width: 100%;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*======== header ===========*/
+.header {
+  background-color: #0f0f0f;
+}
+.header__inner {
+  font-size: 1.6rem;
+  padding-top: 2px;
+  padding-bottom: 3.5rem;
+}
+.header__inner__top {
+  display: flex;
+  color: #fefefe;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__inner__top__single {
+  display: flex;
+  gap: 1.3rem;
+}
+.header__inner__top__single--left {
+  align-items: center;
+}
+.header__inner__top__single--left .dial {
+  font-size: 2.5rem;
+}
+.header__inner__top__single--right {
+  font-size: 2.2rem;
+  gap: 2.5rem;
+}
+.header__inner__btm {
+  margin-top: 2rem;
+}
+.header__inner__btm ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.header__inner__btm ul li a {
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.header__inner .modal {
+  display: none;
+}
+.header .search_box {
+  display: none;
+}
+
+/* ======= breadcrumb =========*/
+.breadcrumb__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+.breadcrumb__inner--right select {
+  background: none;
+  padding: 2px 4px;
+}
+.breadcrumb__inner--left ul {
+  display: flex;
+  gap: 1rem;
+}
+.breadcrumb__inner--left ul li i {
+  margin-left: 0.5rem;
+}
+
+/*====== filter ========*/
+.filter__inner__top {
+  display: flex;
+  gap: 1.2rem;
+}
+.filter__inner__top button {
+  background-color: #f0f0f0;
+  padding: 10px 18px;
+  display: flex;
+  gap: 5.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  font-family: inter;
+  margin-bottom: 1.5rem;
+}
+.filter__inner__top .filter_box {
+  display: none;
+}
+.filter__inner__btm {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.filter__inner__btm__single {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.filter__inner__btm__single button {
+  border: none;
+  background-color: #f4f4f4;
+  padding: 6px 8px;
+  border-radius: 13px;
+}
+.filter__inner__btm .rem_filter {
+  margin-left: 1rem;
+}
+.filter__inner__btm .rem_filter button {
+  background: transparent;
+  border: 1px solid #f2f2f2;
+}
+
+/* ========== Products ==========*/
+.products__inner {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 3rem;
+}
+.products__inner__single {
+  flex: 1;
+  position: relative;
+}
+.products__inner__single .bp_btn button {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  border: none;
+  border-radius: 0;
+  background-color: #1cc200;
+  color: #fefefe;
+  padding: 3px 8px;
+  font-weight: 500;
+  font-family: inter;
+  font-size: 1.4rem;
+}
+.products__inner__single .product {
+  position: relative;
+}
+.products__inner__single .product .product_img img {
+  width: 100%;
+}
+.products__inner__single .product .product_img img:last-of-type {
+  display: none;
+}
+.products__inner__single .product .product_size ul {
+  display: none;
+  gap: 1rem;
+  font-size: 1.6rem;
+  justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+.products__inner__single .product:hover .product_img img:last-of-type {
+  display: inline-block;
+}
+.products__inner__single .product:hover .product_img img:first-of-type {
+  display: none;
+}
+.products__inner__single .product:hover {
+  cursor: pointer;
+}
+.products__inner__single .product:hover .product_size ul {
+  display: flex;
+  transition: all 2s ease-in;
+}
+.products__inner__single h6 {
+  color: #c19f55;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+.products__inner__single .product_details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.products__inner__single .product_details h3 {
+  font-weight: normal;
+}
+.products__inner__single .product_details .icon:hover {
+  cursor: pointer;
+}
+.products__inner__single .product_details .icon i {
+  color: #c1bdbd;
+}
+
+/*========pagination=========*/
+.pagination__inner {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 8rem auto;
+  align-items: center;
+}
+.pagination__inner .pages_btns button {
+  background: none;
+  border: none;
+}
+.pagination__inner .pages_btns .active_page {
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bc8e2a;
+  color: #fefefe;
+  margin-left: 1.5rem;
+}
+
+/* ============ footer nav ============ */
+.footer_nav {
+  background-color: #0f0f0f;
+  color: #fefefe;
+  padding-top: 3.5rem;
+  padding-right: 8rem;
+}
+.footer_nav__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_nav__inner__single {
+  max-width: 245px;
+}
+.footer_nav__inner__single a {
+  color: #fefefe;
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.footer_nav__inner__single h3 {
+  margin-bottom: 1rem;
+}
+.footer_nav__inner__single p {
+  margin-top: 7px;
+}
+
+.footer {
+  background-color: #0f0f0f;
+  color: #fefefe;
+  padding: 2rem 0;
+}
+.footer__inner .social_sites {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.footer__inner .social_sites a {
+  color: #0f0f0f;
+  width: 30px;
+  background-color: #fefefe;
+  border-radius: 50%;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+  font-size: 1.8rem;
+}
+.footer__inner .footer_texts {
+  text-align: center;
+}
+.footer__inner .menu_box, .footer__inner .chat_box {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

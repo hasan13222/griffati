@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+$font: "Inter", sans-serif;
+$black: #0f0f0f;
+$white: #fefefe;
+$border: 1px solid #f2f2f2;
+%brdr {
+  border: $border;
+  border-radius: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: $font;
+  background-color: $white;
+  font-size: 1.4rem;
+}
+.full_container {
+  width: 100%;
+}
+.container {
+  padding: 0 15px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/*======== header ===========*/
+.header {
+  &__inner {
+    &__top {
+      &__single {
+        display: flex;
+        gap: 1.3rem;
+        &--left {
+          align-items: center;
+          .dial {
+            font-size: 2.5rem;
+          }
+        }
+        &--right {
+          font-size: 2.2rem;
+          gap: 2.5rem;
+        }
+      }
+      display: flex;
+      color: $white;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__btm {
+      margin-top: 2rem;
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        li a {
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .modal {
+      display: none;
+    }
+
+    font-size: 1.6rem;
+    padding-top: 2px;
+    padding-bottom: 3.5rem;
+  }
+  .search_box {
+    display: none;
+  }
+
+  background-color: $black;
+}
+
+/* ======= breadcrumb =========*/
+.breadcrumb {
+  &__inner {
+    &--right {
+      select {
+        background: none;
+        @extend %brdr;
+        padding: 2px 4px;
+      }
+    }
+    &--left {
+      ul {
+        display: flex;
+        gap: 1rem;
+
+        li i {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/*====== filter ========*/
+.filter {
+  &__inner {
+    &__top {
+      button {
+        background-color: #f0f0f0;
+        padding: 10px 18px;
+        display: flex;
+        gap: 5.5rem;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-radius: 2px;
+        font-size: 1.6rem;
+        font-family: inter;
+        margin-bottom: 1.5rem;
+      }
+      display: flex;
+      gap: 1.2rem;
+
+      .filter_box {
+        display: none;
+      }
+    }
+    &__btm {
+      &__single {
+        button {
+          border: none;
+          background-color: #f4f4f4;
+          padding: 6px 8px;
+          border-radius: 13px;
+        }
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .rem_filter {
+        margin-left: 1rem;
+        button {
+          background: transparent;
+          border: $border;
+        }
+      }
+
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}
+
+/* ========== Products ==========*/
+.products {
+  &__inner {
+    margin-top: 2.5rem;
+    &__single {
+      flex: 1;
+      position: relative;
+      .bp_btn button {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        border: none;
+        border-radius: 0;
+        background-color: #1cc200;
+        color: $white;
+        padding: 3px 8px;
+        font-weight: 500;
+        font-family: inter;
+        font-size: 1.4rem;
+      }
+      @extend %brdr;
+      .product {
+        position: relative;
+        .product_img img {
+          width: 100%;
+        }
+        .product_img img:last-of-type {
+          display: none;
+        }
+        .product_size ul {
+          display: none;
+          gap: 1rem;
+          font-size: 1.6rem;
+          justify-content: center;
+          position: absolute;
+          bottom: 2rem;
+          width: 100%;
+        }
+      }
+      .product:hover .product_img img:last-of-type {
+        display: inline-block;
+      }
+      .product:hover .product_img img:first-of-type {
+        display: none;
+      }
+      .product:hover {
+        cursor: pointer;
+      }
+      .product:hover .product_size ul {
+        display: flex;
+        transition: all 2s ease-in;
+      }
+      h6 {
+        color: #c19f55;
+        font-size: 1.6rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0 2rem;
+        padding-bottom: 2rem;
+        border-bottom: $border;
+      }
+      .product_details {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        h3 {
+          font-weight: normal;
+        }
+        .icon:hover {
+          cursor: pointer;
+        }
+        .icon i {
+          color: #c1bdbd;
+        }
+      }
+    }
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+/*========pagination=========*/
+.pagination {
+  &__inner {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 8rem auto;
+    align-items: center;
+    .pages_btns button {
+      background: none;
+      border: none;
+    }
+    .pages_btns .active_page {
+      padding: 10px 14px;
+      border-radius: 50%;
+      border: none;
+      background-color: #bc8e2a;
+      color: $white;
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+/* ============ footer nav ============ */
+.footer_nav{
+  &__inner{
+    &__single{
+      max-width: 245px;
+      a {
+        color: $white;
+        display: flex;
+        margin-bottom: 0.8rem;
+      }
+      h3{
+        margin-bottom: 1rem;
+      }
+      p{
+        margin-top: 7px;
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+  background-color: $black;
+  color: $white;
+  padding-top: 3.5rem;
+  padding-right: 8rem;
+}
+
+
+.footer{
+  &__inner{
+    .social_sites{
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .social_sites a{
+      color: $black;
+      width: 30px;
+      background-color: $white;
+      border-radius: 50%;
+      height: 30px;
+      text-align: center;
+      display: inline-block;
+      padding-top: 5px;
+      font-size: 1.8rem;
+    }
+    .footer_texts {
+      text-align: center;
+    }
+    .menu_box, .chat_box {
+      display: none;
+    }
+  }
+  background-color: $black;
+  color: $white;
+  padding: 2rem 0;
+}
+
